@@ -28,8 +28,9 @@ export default class AllPlayers extends React.Component {
   };
 
   componentDidMount() {
+    const proxy= "https://cors-anywhere.herokuapp.com/"
     const url = "https://playersratemanagement1.herokuapp.com/getAllPlayers";
-    fetch(url)
+    fetch(`${proxy}${url}`)
       .then(response => {
         return response.json();
       })
